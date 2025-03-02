@@ -150,7 +150,7 @@ const checkCompletionAndTriggerWebhook = async (requestId) => {
         console.error(`Error in worker process:`, error);
       }
     },
-    { connection }
+    { connection, concurrency:5 }
   );
 })();
 
